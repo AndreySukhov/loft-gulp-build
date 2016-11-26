@@ -12,7 +12,8 @@ global.$ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  spritesmith: require('gulp.spritesmith')
 };
 
 $.path.task.forEach(function(taskPath) {
@@ -26,10 +27,12 @@ $.gulp.task('default', $.gulp.series(
     'pug',
     'js:foundation',
     'js:process',
-    'copy:image',
+    'copy:images',
+    'copy:fonts',
     'css:foundation',
-    'sprite:svg'
-  ),
+    'sprite:svg',
+    'sprite:img'
+        ),
   $.gulp.parallel(
     'watch',
     'serve'

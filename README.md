@@ -10,3 +10,10 @@ Getting started:
 3. npm install gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
 4. npm install
 6. run "gulp" command to start
+
+
+#Сухов Андрей
+
+# сделан  таск copy:fonts (для шрифтов)
+
+# добален таск sprite.img.js (собирает спрайт из всех картинок в папке 'gulp-builder-dz1/source/images')
